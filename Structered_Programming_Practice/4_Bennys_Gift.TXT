@@ -1,0 +1,78 @@
+Benny, Neerja's dearest friend wanted to give Neerja a unique gift for her birthday.
+ 
+
+
+
+He purchased one such gift and presented it to Neerja, days before her birthday as he had to fly abroad.
+ 
+
+
+
+
+But with a note to Neerja to open the gift only on her birthday (September 7) and not before that. Neerja was desperate about opening the gift. 
+Given the current date, month and time, , help Neerja to find if it was the the right day to open the gift.
+ 
+
+
+
+Input Format :
+The first line of input is an integer D corresponding to the current date ( 0 < D < 32 ).
+The second line of input is an integer M corresponding to the current month ( 0 < M < 13 ).
+The third line of input is an integer H corresponding to the current hours ( 0 <= H < 24 )
+The fourth line of input is an integer m corresponding to the current minutes ( 0 <= M < 60 )
+
+Output Format :
+The output consists of one line.
+Print “Yes” if she can open it and “No” is she can't.
+Print “Invalid Input” if any of the inputs is out of range.
+Refer sample input(s) and output(s) for formatting specifications.
+
+Sample Input 1:
+7
+9
+13
+0
+Sample Output 1:
+Yes
+
+Sample Input 2:
+6
+9
+13
+0
+Sample Output 2:
+No
+
+Sample Input 3:
+7
+-9
+13
+0
+Sample Output 3:
+Invalid Input
+
+import java.util.*;
+
+public class Main
+{
+    public static void main(String[] args)
+    {
+        int day,month,hour,min;
+        Scanner in =new Scanner(System.in);
+        day=in.nextInt();
+        month=in.nextInt();
+        hour=in.nextInt();
+        min=in.nextInt();
+        if(day<=0||day>=32||month<=0||month>=13||hour<0||hour>24||min<0||min>=60)
+        {
+            System.out.println("Invalid Input");
+            System.exit(0);
+        }
+        if(day==7&&month==9&&hour>0&&hour<24&&min>=0&&min<60)
+        {
+            System.out.println("Yes");
+        }
+        else
+            System.out.println("No");
+    }
+}

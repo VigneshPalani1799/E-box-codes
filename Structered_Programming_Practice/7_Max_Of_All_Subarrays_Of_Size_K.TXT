@@ -1,0 +1,74 @@
+Given an array ar[] of length ‘n’ and an integer ‘k’ such that k < n. You need to maintain a window of size ‘k’ starting from i=0 to i=k and 
+print the MAX of that segment. The window moves forward by 1 element.
+Examples:
+Input :
+arr[] = {1, 2, 3, 1, 4, 5, 2, 3, 6}
+k = 3
+Output :
+3 3 4 5 5 5 6
+Input :
+arr[] = {8, 5, 10, 7, 9, 4, 15, 12, 90, 13}
+k = 4
+Output :
+10 10 10 15 15 90 90
+
+Input and Output Format:
+The first line of the input consists of an integer, n that corresponds to the number of elements in the input array.
+The next 'n' lines in the input correspond to the elements in the array.
+The next line of the input consists of an integer, k.
+Output is an array of integers.
+Sample Input1:
+9
+1
+2
+3
+1
+4
+5
+2
+3
+6
+3
+Sample Output1:
+3 3 4 5 5 5 6
+ 
+Sample Input2:
+4
+1
+2
+3
+4
+5
+Sample Output2:
+-1
+
+
+import java.util.*;
+
+public class Main
+{
+    public static void main(String[] args)
+    {
+        int n,k,i,j;
+        Scanner in =new Scanner(System.in);
+        n=in.nextInt();
+        int[] a = new int[n];
+        int[] max=new int[100];
+        for(i=0;i<n;i++)
+            a[i]=in.nextInt();
+        k=in.nextInt();
+        if(k>n)
+            System.out.println("-1");
+        for(i=0;i<n-k+1;i++)
+        {
+            max[i]=a[i];
+            for(j=i;j<(i+k);j++)
+            {
+                if(a[j]>max[i])
+                    max[i]=a[j];
+            }
+        }
+        for(i=0;i<n-k+1;i++)
+            System.out.print(max[i]+" ");
+    }
+}

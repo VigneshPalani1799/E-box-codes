@@ -1,0 +1,72 @@
+In Japan ,there was a very huge Tsunami. Millions and millions worth buildings and properties were destroyed. Many people lost their lives. 
+Most of them were injured and few were safe. A news reporter arrives to the spot to take the current survey regarding the situation of the 
+people alive , dead and injured. He wanted to publish it in the newspaper and ask the other countries to help the affected people. 
+Can you please help him in this noble cause by writing a program to generate the newspaper report?
+
+INPUT FORMAT:
+
+Input consists of three integers corresponding to the number of people dead , injured and those who are still alive and safe.
+
+OUTPUT FORMAT:
+
+Refer sample input and output for formatting specifications.
+
+ 
+
+[All text in bold corresponds to input and the rest corresponds to output]
+
+SAMPLE INPUT AND OUTPUT FORMAT:
+
+Enter the number of people dead:
+
+2000
+
+Enter the number of people injured:
+
+3000
+
+Enter the number of people safe:
+
+10000
+
+TSUNAMI REPORT OF JAPAN
+
+The number of people
+
+1)Dead:2000
+
+2)Injured:3000
+
+3)Safe:10000
+
+Please help the people who are suffering!!!
+
+
+
+
+import java.util.*;
+import java.io.*;
+
+public class Main
+{
+    public static void main(String[] args)
+    {
+        DataInputStream in = new DataInputStream(System.in);
+        int dead,inj,safe;
+        try{
+        System.out.println("Enter the number of people dead:");
+        dead=Integer.parseInt(in.readLine());
+        System.out.println("Enter the number of people injured:");
+        inj=Integer.parseInt(in.readLine());
+        System.out.println("Enter the number of people safe:");
+        safe=Integer.parseInt(in.readLine());
+        }
+        catch(Exception e){}
+        System.out.println("TSUNAMI REPORT OF JAPAN");
+        System.out.println("The number of people");
+        System.out.println("1)Dead:"+dead);
+        System.out.println("2)Injured:"+inj);
+        System.out.println("3)Safe:"+safe);
+        System.out.println("Please help the people who are suffering!!!");
+    }
+}

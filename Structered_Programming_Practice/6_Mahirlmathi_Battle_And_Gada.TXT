@@ -1,0 +1,76 @@
+The Gada is a heavy rod of iron with one hundred spikes on the top. One of the four cubits was able to destroy elephants and rocks. It
+could be handled in twenty different ways. By means of gun powder it could be used as a projectile weapon of war. Its principal use 
+was to strike the enemy either from a raised place or from both sides and strike terror into the enemy .
+Baahubali and Bhalla Deva are the 2 princes of the kingdom of Mahirlmathi.
+
+When a war is forced upon Mahirlmati by the Kalakeyas, Sivagami, the Queen of Mahirlmathi promises that the new king will be the one 
+who beheads the Kalakeya king and orders that the war resources be distributed equally between the two cousins. Bijjala Deva , Bhalla 
+Deva's father, uses his cunningness to make sure Bhalladeva gets the maximum war fare.
+Baahubali gets Kattapa's help to manufacture few Gadas to be  used in the army during the battle.
+
+However, due to budget and logistic reasons, it's only possible to manufacture 1 Gada per day, which means that for a long time, many 
+warriors will be waiting for their Gadas to arrive.
+
+There are N warriors and  K Gadas. Baahubali was thinking about how to distribute these Gadas to the n warriors. He asked the help of 
+Mahirl,the renowned mathematical scholar of the land of Mahirlmathi. He asked Mahirl ---  "Imagine that there are N warriors and that there 
+are only K Gadas. In how many ways, can I distibute these K Gadas among the warriors, if I see them as being distinct?"
+Mahirl replied immediately with the right answer. But Baahubali had another question for the scholar: "Okay Mahirl, as you are so 
+fast,now I want you to tell me exactly the same thing, but, with the addition that the value of K is changing, that is, I want you to 
+tell me the sum of the number of ways I can distribute  K Gadas, if the value of K goes from 1 (meaning that there are is only 1 Gada)
+to N (meaning that there are N Gadas). Can you be as fast now?”
+
+Can you please help Mahirl is answering this question?
+
+Input Format :
+Input consists of a single integer that corrresponds to the number of warriors.
+
+Output Format :
+Output consists of an integer that denotes the sum of the number of ways Baahubali can districute the K Gadas among the N warriors , 
+as K goes from 1 to N.
+Constraints
+1 ≤ N ≤ 100
+
+
+Sample Input 1:
+1
+
+Sample Output 1:
+1
+
+
+Sample Input 2:
+2
+
+Sample Output 2:
+3
+
+
+import java.util.*;
+
+class Math
+{
+    int fact(int n)
+    {
+        int i;
+        if(n==0||n==1)
+            return 1;
+        else
+            return n*fact(n-1);
+    }
+}
+
+public class Main
+{
+    public static void main(String[] args)
+    {
+        int n,total,k;
+        Math m =new Math();
+        Scanner in =new Scanner(System.in);
+        n=in.nextInt();
+        total=0;
+        for(k=1;k<=n;k++)
+        {
+            total=total+(m.fact(n)/(m.fact(n-k)*m.fact(k)));
+        }
+        System.out.println(total);
+    }

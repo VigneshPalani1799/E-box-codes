@@ -1,0 +1,69 @@
+The Pan Am 73 flight landed at the Jinnah International Airport, Karachi, for an hour-long stopover. Four heavily armed terrorists suddenly 
+gathered near the passengers and hijacked Pan Am 73. The passengers started screaming in panic. The terrorists ordered the pssengers to maintain 
+silence and threatened their lives. The whole aircraft was in a tremor. The four terrorists took charge  of the various sections. Neerja – the 
+flight purser had already been trained on hijack situations. As her first and the most crucial move she has to pass a hijack code to the cockpit.
+
+She quickly picks up the intercom and calls the cockpit and passes the hijack code. The air crew were discussing on what has to be done. 
+According to the air crew's protocol they had to flee the aircraft leaving the engine running. But before they could evacuate the cockpit they 
+needed to put a lock to the cockpit door. The cockpit lock code was a six digit code in which all digits in the code were prime numbers. Given a 
+code check if it a cockpit lock code.
+
+Input Format :
+The first line of input is an integer L corresponding to the lock code. 0 < H
+
+Output Format :
+The output consists of one line.
+Print “Yes” if L is a cockpit lock code else print “No”.
+Print “Invalid Input” if the code is out of range.
+Refer sample input(s) and output(s) for formatting specifications.
+
+Sample Input 1:
+535355
+Sample Output 1:
+Yes
+
+Sample Input 2:
+800701
+Sample Output 2:
+No
+
+Sample Input 3:
+-20000
+Sample Output 3:
+Invalid Input
+
+
+
+import java.io.*;
+import java.util.*;
+public class Main
+{
+    public static void main(String[] args)
+    {
+        DataInputStream in = new DataInputStream(System.in);
+        int prime,a,i;
+        try
+        {
+          prime=Integer.parseInt(in.readLine());
+          if(prime<=0){
+            System.out.println("Invalid Input");
+            System.exit(0);
+          }
+          while(prime!=0)
+          {
+              a=prime%10;
+              for(i=2;i<a/2;i++)
+              {
+                  if(a%i==0){
+                    System.out.println("No");
+                    System.exit(0);
+                  }
+              }
+              prime=prime/10;
+          }
+          System.out.println("Yes");
+        }
+        catch(Exception e)
+        {}
+    }
+}

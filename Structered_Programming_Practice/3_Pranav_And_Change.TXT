@@ -1,0 +1,89 @@
+Pranav, an enthusiastic kid visited the "Fun Fair 2017" along with his family. His father wanted him to purchase entry tickets from the counter 
+for his family members. Being a little kid, he is just learning to understand about units of money. Pranav has paid some amount of money for the
+tickets but he wants your help to give him back the change of Rs. N using minimum number of rupee notes.
+ 
+Consider a currency system in which there are notes of seven denominations, namely, Rs. 1, Rs. 2, Rs. 5, Rs. 10, Rs. 50, Rs. 100. If the change 
+given to Pranav Rs. N is input, write a program to computer smallest number of notes that will combine to give Rs. N.
+
+Note:
+Refer to problem specifications.
+
+Input Format:
+First line of the input is an integer N, the change to be given to Pranav.
+ 
+Output Format:
+Output should display the the smallest number of notes that will combine to give N.
+Refer sample input and output for formatting specifications.
+
+Sample Input 1:
+1200
+
+Sample Output1:
+12
+
+Sample Input 2:
+242
+
+Sample Output2:
+7
+
+
+Problem Requirements:
+C
+Keyword	Min Count	Max Count
+do	0	0
+Keyword	Min Count	Max Count
+while ....	0	0
+
+
+import java.io.*;
+
+public class Main
+{
+    public static void main(String[] args)
+    {
+        int c;
+        DataInputStream in = new DataInputStream(System.in);
+        int no;
+        c=0;
+        try{
+            no=Integer.parseInt(in.readLine());
+            for(;no>0;)
+            {
+                if(no>=100)
+                {
+                    c=c+no/100;
+                    no=no%100;
+                }
+                if(no>=50)
+                {
+                    c=c+no/50;
+                    no=no%50;
+                }
+                if(no>=10)
+                {
+                    c=c+no/10;
+                    no=no%10;
+                }
+                if(no>=5)
+                {
+                    c=c+no/5;
+                    no=no%5;
+                }
+                if(no>=2)
+                {
+                    c=c+no/2;
+                    no=no%2;
+                }
+                if(no>=1)
+                {
+                    c=c+no/1;
+                    no=no%1;
+                }
+            }
+            System.out.println(c);
+        }
+        catch(Exception e)
+        {}
+    }
+}
