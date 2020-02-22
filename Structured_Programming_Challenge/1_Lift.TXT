@@ -1,0 +1,81 @@
+The Personalized Gifts store is in the nth floor.
+
+Sita gets into a lift in the ground floor.
+
+The lift that Sita gets in does not stop in all floors. It stops in only 3 floors numbered n1, n2 and n3.
+
+She wants to get down in the floor that is closest to n. If there are 2 choices, she always prefers to climb down the stairs rather than 
+climbing up.
+
+Help Sita in deciding the floor she should get down from the lift.
+
+Input Format:
+
+Input consists of 4 integers corresponding to n, n1, n2 and n3.  [n1<n2<n3]
+
+Output Format:
+
+Output consists of an integer that corresponds to the floor number where she would get down.
+Refer sample input and output for formatting specifications.
+
+Sample Input 1:
+
+10
+
+4
+
+8
+
+15
+
+Sample Output 1:
+
+8
+
+ 
+
+Sample Input 2:
+
+10
+
+4
+
+8
+
+12
+
+Sample Output 2:
+
+12
+
+import java.util.*;
+import java.lang.Math;
+public class Main
+{
+    public static void main(String[] args)
+    {
+        Scanner in =new Scanner(System.in);
+        int n,n1,n2,n3;
+        int a,b,c;
+        n=in.nextInt();
+        n1=in.nextInt();
+        n2=in.nextInt();
+        n3=in.nextInt();
+        a=(Math.abs(n-n1));
+        b=(Math.abs(n-n2));
+        c=(Math.abs(n-n3));
+        if(a<b&&a<c)
+            System.out.println(n1);
+        else if(b<c&&b<a)
+            System.out.println(n2);
+        else if(c<a&&c<b)
+            System.out.println(n3);
+        else if(a==b)
+            System.out.println(n1<n2?n2:n1);
+        else if(b==c)
+            System.out.println(n2<n3?n3:n2);
+        else
+            System.out.println(n1<n3?n3:n1);
+        
+    }
+}
