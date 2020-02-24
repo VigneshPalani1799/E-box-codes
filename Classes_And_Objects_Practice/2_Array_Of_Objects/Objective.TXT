@@ -1,0 +1,112 @@
+Create a class Event with attributes,
+
+Attribute		Data Type
+name			String
+detail			String
+type			String
+organiser		String
+attendeesCount		Integer
+projectedExpenseDouble
+Make them as private attributes and add appropriate getters/setters, constructor.
+public Event(String name,String detail, String type, String organiser, Integer attendeesCount, Double projectedExpense)
+
+Now let's create a BO (Business Object) class for our event class. Create EventBO to manipulate the objects of the Event class. Create an event 
+array in it to store Event objects.
+
+Create following methods inEventBO class,
+
+Method								Description
+
+public void addEvent(Event[] eventArray,Event eventIns)		takes Event array & object and add it to the array.
+public Event[] searchEvents(Event[] eventArray, String type)	takes eventArray&type and returns an new array of event objects which are of the 
+								type specified. Returns null if there is no events of the specific type.
+
+public void displayAll(Event[] eventArray)			displays all the event details.
+
+CreateMain class and in main method get the number of events, then get their details. Here we also use a new technique of splitting the 
+string. Get the details as comma separated line, split it and save it as Event object before sending to BO class to add it in array of objects.
+
+CSV input format: (name,detail,type,organiser,attendeesCount,projectedExpense)
+
+Note: Strictly adhere to the Object Oriented Specifications given in the problem statement.
+All class names, attribute names and method names should be the same as specified in the problem statement.
+
+Print "No Events available in the given type" in main method if the function returned null.
+    Refer sample input/output for other further details and format of the output.
+
+[All Texts in bold corresponds to the input and rest are output]
+Sample Input/Output 1:
+
+Enter the number of events:
+3
+Enter the details of the event 1 in comma separated format:
+National Book Fair,All books available,Book Fair,ABC ltd,100000,200000
+Enter the details of the event 2 in comma separated format:
+International Science Fair,Explore technology,Science Fair,XYZ ltd,50000,200000
+Enter the details of the event 3 in comma separated format:
+City Book Fair,All books in 20% discount,Book Fair,STU ltd,10000,30000
+The Events entered are:
+Event Details 1
+Name:National Book Fair
+Detail:All books available
+Type:Book Fair
+Organiser:ABC ltd
+Attendees Count:100000
+Projected Expense:200000.0
+Event Details 2
+Name:International Science Fair
+Detail:Explore technology
+Type:Science Fair
+Organiser:XYZ ltd
+Attendees Count:50000
+Projected Expense:200000.0
+Event Details 3
+Name:City Book Fair
+Detail:All books in 20% discount
+Type:Book Fair
+Organiser:STU ltd
+Attendees Count:10000
+Projected Expense:30000.0
+Enter the type of event to be searched:
+Book Fair
+Event Details 1
+Name:National Book Fair
+Detail:All books available
+Type:Book Fair
+Organiser:ABC ltd
+Attendees Count:100000
+Projected Expense:200000.0
+Event Details 2
+Name:City Book Fair
+Detail:All books in 20% discount
+Type:Book Fair
+Organiser:STU ltd
+Attendees Count:10000
+Projected Expense:30000.0
+
+Sample Input/Output 2:
+
+Enter the number of events:
+2
+Enter the details of the event 1 in comma separated format:
+International Science Fair,Explore technology,Science Fair,XYZ ltd,50000,200000
+Enter the details of the event 2 in comma separated format:
+City Book Fair,All books in 20% discount,Book Fair,STU ltd,10000,30000
+The Events entered are:
+Event Details 1
+Name:International Science Fair
+Detail:Explore technology
+Type:Science Fair
+Organiser:XYZ ltd
+Attendees Count:50000
+Projected Expense:200000.0
+Event Details 2
+Name:City Book Fair
+Detail:All books in 20% discount
+Type:Book Fair
+Organiser:STU ltd
+Attendees Count:10000
+Projected Expense:30000.0
+Enter the type of event to be searched:
+Home Appliance Fair
+No Events available in the given type

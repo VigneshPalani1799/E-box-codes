@@ -1,0 +1,63 @@
+Previously we had implemented User Authorization in our application. We had forgotten to implement to check duplicate user details. In our 
+application, there can be only one user with a specific mobile number. If two users exist with the same mobile number they are duplicate.How to 
+check whether two objects are equal?.Yeah, you are right the equals() method. Go on override the equals method and check if two users are same.
+
+Create User class with following private attributes
+
+Attributes	Datatype
+name		String
+username	String
+password	String
+mobileNumber	Long
+Include appropriate getters and setters.
+Create Default and Parameterized Constructor as User(String name, String username, String password, Long mobileNumber) for the class.
+Override equals method that compares mobileNumber of the two objects.
+
+Create a driver class named Main to test the above class.
+
+Note:
+Strictly adhere to the Object-Oriented Specifications given in the problem statement.All class names, attribute names and method names should be 
+the same as specified in the problem statement.
+
+Sample Input/Output - 1:
+Enter the details of User 1
+Name :
+Morsh
+Username :
+Morsh2020
+Password :
+Basic
+Mobile Number :
+1234567890
+Enter the details of User 2
+Name :
+Morsh
+Username :
+Morsh1010
+Password :
+Probob
+Mobile Number :
+0987654321
+User 1 and User 2 are not equal
+
+
+Sample Input/Output - 2:
+Enter the details of User 1
+Name :
+Bajaj
+Username :
+Ba450
+Password :
+particles
+Mobile Number :
+9894098490
+Enter the details of User 2
+Name :
+Bajaj
+Username :
+Bajji
+Password :
+500
+Mobile Number :
+9894098490
+User 1 and User 2 are equal

@@ -1,0 +1,23 @@
+import java.util.*;
+
+public class Main {
+	public static void main(String[] args){
+		//Your code here
+        Scanner in = new Scanner(System.in);
+        String line1,line2,cityName,stateName;
+        int pinCode;
+        System.out.println("Enter Address Line 1");
+        line1 = in.nextLine();
+        System.out.println("Enter Address Line 2");
+        line2 = in.nextLine();
+        System.out.println("Enter the City Name");
+        cityName = in.nextLine();
+        System.out.println("Enter the State Name");
+        stateName = in.nextLine();
+        System.out.println("Enter the Pincode");
+        pinCode = in.nextInt();
+        Address a = new Address(line1,line2,cityName,stateName,pinCode);
+        System.out.println(a.display());
+        System.out.println(a);
+	}
+}

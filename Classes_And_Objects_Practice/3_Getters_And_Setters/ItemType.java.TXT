@@ -1,0 +1,18 @@
+
+public class ItemType {
+	//your code here
+    private String itemType;
+    private Double deposit,costPerDay;
+    public ItemType(String type,Double amt,Double cost )
+    {
+        this.itemType=type;
+        this.deposit=amt;
+        this.costPerDay=cost;
+    }
+    
+    void displayInput(){
+        System.out.println("Item Name:"+this.itemType);
+        System.out.println("Deposit Amount:"+this.deposit);
+        System.out.println("Cost Per Day:"+this.costPerDay);
+    }
+}

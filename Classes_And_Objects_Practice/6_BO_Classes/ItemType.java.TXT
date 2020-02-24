@@ -1,0 +1,33 @@
+public class ItemType {
+    //write your code here
+    private String name;
+    	 Double deposit,costPerDay;
+        public void setName(String name){
+			 this.name = name;
+		}
+		public String getName(){
+			return this.name;
+		}
+		public void setDeposit(Double deposit){
+			 this.deposit = deposit;
+		}
+		public Double getDeposit(){
+			 return this.deposit;
+		}
+		public void setcostPerDay(Double costPerDay){
+			 this.costPerDay = costPerDay;
+		}
+		public Double getcostPerDay(){
+			return this.costPerDay;
+		}
+        public ItemType(String name,Double deposit,Double costPerDay)
+        
+        {
+            this.name=name;
+            this.deposit=deposit;
+            this.costPerDay=costPerDay;
+        }
+		ItemType(){}
+        
+		
+}

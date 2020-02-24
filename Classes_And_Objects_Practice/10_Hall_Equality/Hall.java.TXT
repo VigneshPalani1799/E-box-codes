@@ -1,0 +1,38 @@
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+public class Hall {
+	// fill the code here
+    private String name,ownerName;
+    private Long contactNumber;
+    private Double costPerDay;
+    private Date bookingDate;
+    public Hall(String name,Long contactNumber,Double costPerDay,String ownerName,Date bookingDate)
+    {
+        this.name=name;
+        this.contactNumber=contactNumber;
+        this.costPerDay=costPerDay;
+        this.ownerName=ownerName;
+        this.bookingDate=bookingDate;
+    }
+    
+    public String getOwnerName(){
+        return this.ownerName;
+    }
+    
+    public String getName(){
+        return this.name;
+    }
+    
+    public Long getContact(){
+        return this.contactNumber;
+    }
+    
+    public Double getCost(){
+        return this.costPerDay;
+    }
+    
+    public Date getDate(){
+        return this.bookingDate;
+    }
+}

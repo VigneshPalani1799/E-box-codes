@@ -1,0 +1,14 @@
+import java.util.*;
+public class ItemTypeBO {
+    public Double calculateCost(Date start,Date end, ItemType typeIns){
+		//write your code here
+        long di=end.getTime()-start.getTime();
+        double diff=(double)di;
+        double days=(diff/(1000*60*60*24));
+        double c=typeIns.costPerDay*days;
+        return c;
+        
+        
+        
+	}
+}

@@ -1,0 +1,19 @@
+import java.util.*;
+
+public class Main {
+	public static void main(String[] args){
+		//your code here
+        Scanner in = new Scanner(System.in);
+        //String type;
+        Double amount,cost;
+        System.out.println("Enter the Item Type Name");
+        String type=in.nextLine();
+        System.out.println("Enter the Deposit Amount");
+        amount=in.nextDouble();
+        System.out.println("Enter the Cost per day of the Item Type");
+        cost=in.nextDouble();
+        
+        ItemType obj = new ItemType(type,amount,cost);
+        obj.displayInput();
+	}
+}

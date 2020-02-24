@@ -1,0 +1,56 @@
+Your application should have a provision to add a user by entering his/her details. The user details include username, contact detail etc. The
+address of the user should also be included. Yet address may consist of several attributes. Hence create a console application for entering the 
+address for a user. Create a class named Address and which has the following private attributes.
+
+Attributes	Datatype
+addressLine1	String
+addressLine2	String
+city	String
+state	String
+pincode	Integer
+ 
+
+ 
+
+Include Default and Parameterized Constructor for the class.
+Format for the Parameterized Constructor is as follows
+Address(String addressLine1, String addressLine2, String city,String state, Integer pincode)
+
+Include appropriate Getters and Setters for the class.
+
+ 
+
+Example :
+public void setName(String name){
+ this.name = name;
+}
+public String getName(){
+ return this.name;
+}
+Override the toString() method in the class to display the address as per the sample test case.
+
+Create a driver class called Main.  In the Main method, obtain input from console and create a new object for the class Address. Display the 
+address details.
+Note: The print statement "The Address Details are" should be in the Main class.
+Strictly adhere to the Object-Oriented Specifications given in the problem statement.
+All class names, attribute names and method names should be the same as specified in the problem statement.
+
+[All text in bold corresponds to input and rest corresponds to ouput]
+Sample Input/Output:
+
+Enter Address Line 1
+22nd Lane
+Enter Address Line 2
+8th cross road, RR nagar
+Enter the City Name
+Chennai
+Enter the State Name
+Tamilnadu
+Enter the Pincode
+620001
+The Address Details are
+22nd Lane
+8th cross road, RR nagar
+Chennai
+Tamilnadu
+620001

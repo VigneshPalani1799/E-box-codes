@@ -1,0 +1,20 @@
+public class ItemType {
+    //write your code here
+    String name;
+    Double deposit,costPerDay;
+    public String getName() {
+        return name;
+    }
+    
+    ItemType(String name,Double deposit,Double costPerDay)
+    {
+     this.name=name;
+     this.deposit=deposit;
+     this.costPerDay=costPerDay;
+    }
+    @Override
+    public String toString() {
+    	//Your code here
+        return "Name:"+name+"\nDeposit Amount:"+deposit+"\nCost Per Day:"+costPerDay;
+	}
+}

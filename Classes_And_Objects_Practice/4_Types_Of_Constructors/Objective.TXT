@@ -1,0 +1,44 @@
+Now you know to create an object and use getters and setters. Next, we move on to another method of object creation, Constructors. We are going 
+to use default and parameterized constructor here.
+
+Create a class StallCategory with following private attributes,
+
+Attribute	 Data Type
+name	String
+detail	String
+Method Name	Description
+void display()	This method displays the details of the StallCategory as per specification provided in the sample input & output
+ 
+Include appropriate getters and setters
+
+
+ Example :
+public void setName(String name){
+ this.name = name;
+}
+public String getName(){
+ return this.name;
+}
+Include default and parameterized constructor. Create objects for the class StallCategory in Main class using both and find that there is no 
+difference between them.
+
+public StallCategory() - default constructor
+public StallCategory(String name, String detail) - parameterised
+
+Note: Strictly adhere to the Object-Oriented Specifications given in the problem statement.
+All class names, attribute names and method names should be the same as specified in the problem statement.
+
+[All Texts in bold corresponds to the input and rest are output]
+Sample Input/Output 1:
+Enter the name of the stall category:
+Book
+Enter the details of the stall category:
+All latest books are available under this category
+Using Default Constructor
+Details of the stall category:
+Name:Book
+Detail:All latest books are available under this category
+Using Parameterised Constructor
+Details of the stall category:
+Name:Book
+Detail:All latest books are available under this category

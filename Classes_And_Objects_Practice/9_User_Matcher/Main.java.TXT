@@ -1,0 +1,40 @@
+import java.util.*;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+public class Main {
+	public static void main(String[] args) throws NumberFormatException, IOException{
+		// fill the code here
+        Scanner in = new Scanner(System.in);
+        String name,username,password;
+        Long mobileNumber;
+        
+        System.out.println("Enter the details of User 1");
+        System.out.println("Name :");
+        name=in.nextLine();
+        System.out.println("Username :");
+        username=in.nextLine();
+        System.out.println("Password :");
+        password=in.nextLine();
+        //String e=in.nextLine();
+        System.out.println("Mobile Number :");
+        mobileNumber=in.nextLong();
+        String e=in.nextLine();
+        User u=new User(name,username,password,mobileNumber);
+        System.out.println("Enter the details of User 2");
+        System.out.println("Name :");
+        name=in.nextLine();
+        System.out.println("Username :");
+        username=in.nextLine();
+        System.out.println("Password :");
+        password=in.nextLine();
+        System.out.println("Mobile Number :");
+        mobileNumber=in.nextLong();
+        User u1 =  new User(name,username,password,mobileNumber);
+        if(u.mobileNumber.equals(u1.mobileNumber)==true){
+            System.out.println("User 1 and User 2 are equal");}
+        else{
+            System.out.println("User 1 and User 2 are not equal");}
+	}
+}

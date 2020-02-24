@@ -1,0 +1,39 @@
+public class ItemTypeBO {
+    int c=0;
+    public void add(ItemType n1,ItemType[] itemTypeArray,Integer index){
+        //Your code here
+        if(c!=10)
+        {
+        itemTypeArray[index]=n1;
+        c++;
+        System.out.println("New item added successfully");
+        }
+	}
+    
+	public void search(String search,ItemType[] itemTypeArray){
+		//Your code here
+        for(int i=0;i<c;i++)
+        {
+            if((itemTypeArray[i].getName()).equals(search))
+            {
+            System.out.println("Searched Item Type is:");
+            System.out.println(itemTypeArray[i]);
+            System.exit(0);
+            }
+            else
+            {
+                continue;
+            }
+        }
+        System.out.println("Searched Item Type not found");
+	}
+	public void display(ItemType[] itemTypeArray){
+		//Your code here
+            //write your code here
+        for(int i=0;i<c;i++)
+        {
+            System.out.println("Item Type Number "+(i+1)+":");
+            System.out.println(itemTypeArray[i]);
+        }
+	}
+}

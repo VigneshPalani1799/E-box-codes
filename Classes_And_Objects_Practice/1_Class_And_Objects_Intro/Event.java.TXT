@@ -1,0 +1,42 @@
+import java.io.*;
+
+public class Event {
+    //Your code here
+    String name,detail,type,organiser;
+    int attendeesCount;
+    Double projectedExpenses;
+    
+    public Event(){}
+    
+    DataInputStream in =new DataInputStream(System.in);
+    public void getAttribute()
+    {
+        try{
+        System.out.println("Enter the Event Name");
+        name=in.readLine();
+        System.out.println("Enter the Event Details");
+        detail=in.readLine();
+        System.out.println("Enter the Event Type");
+        type=in.readLine();
+        System.out.println("Enter the Organiser Name");
+        organiser=in.readLine();
+        System.out.println("Enter the Attendees Count");
+        attendeesCount=Integer.parseInt(in.readLine());
+        System.out.println("Enter the Projected Expense");
+        projectedExpenses=Double.parseDouble(in.readLine());
+        }
+        catch(Exception ex){
+            
+        }
+    }
+    
+    public void putAttribute()
+    {
+        System.out.println("Name:"+name);
+        System.out.println("Detail:"+detail);
+        System.out.println("Type:"+type);
+        System.out.println("Organiser:"+organiser);
+        System.out.println("Attendees Count:"+attendeesCount);
+        System.out.println("Projected Expense:"+projectedExpenses);
+    }
+}

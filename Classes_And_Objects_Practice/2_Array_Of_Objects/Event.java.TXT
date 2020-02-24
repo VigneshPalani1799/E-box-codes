@@ -1,0 +1,43 @@
+public class Event {
+    String name;
+    String detail;
+    String type;
+    String organiser;
+    int attendesCount;
+    double projectedExpenses;
+    public String getName() {
+        return name;
+    }
+    public void setName(String name) {
+        this.name = name;
+    }
+    public String getDetail() {
+        return detail;
+    }
+    public void setDetail(String detail) {
+        this.detail = detail;
+    }
+    public String getType() {
+        return type;
+    }
+    public void setType(String type) {
+        this.type = type;
+    }
+public Event(String name, String detail, String type, String organiser, int attendesCount,
+            double projectedExpenses) {
+		super();
+		this.name = name;
+		this.detail = detail;
+		this.type = type;
+		this.organiser = organiser;
+		this.attendesCount = attendesCount;
+		this.projectedExpenses = projectedExpenses;
+	}
+    
+   
+	@Override
+	public String toString() {
+		return ("Name:"+this.name+"\nDetail:"+this.detail+"\nType:"+this.type+"\nOrganiser:"+this.organiser+"\nAttendees Count:"+this.attendesCount+"\nProjected Expense:"+projectedExpenses);
+	}
+	
+}

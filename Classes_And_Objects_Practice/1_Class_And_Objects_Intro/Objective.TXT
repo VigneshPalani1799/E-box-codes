@@ -1,0 +1,40 @@
+Create a class named Event which has the following attributes
+Attributes	Datatype
+name	String
+detail	String
+type	String
+organiser	String
+attendeesCount	Integer
+projectedExpenses	Double
+Include create appropriate getters and setters for those attributes
+Include a default constructor
+Now Include a parameterized Constructor for the class with all attributes. Have a look at the below example
+Event(String name, String detail, String type, String organiser,Integer attendeesCount, Double projectedExpenses)
+
+Create a driver class called Main. In the main method, obtain input from the console. Create a new object for the class Event from the input and 
+display the details by overriding the toString() method.
+Note: Display single digit after a decimal point for Double datatype.
+Strictly adhere to the Object-Oriented Specifications given in the problem statement.
+All class names, attribute names and method names should be the same as specified in the problem statement.
+
+[All text in bold corresponds to the input and rest corresponds to output]
+Sample Input/Output:
+
+Enter the Event Name
+Book expo
+Enter the Event Details
+special discount sale
+Enter the Event Type
+Reading
+Enter the Organiser Name
+Ramachandran
+Enter the Attendees Count
+25
+Enter the Projected Expense
+5000
+Name: Book expo
+Detail: special discount sale
+Type: Reading
+Organiser: Ramachandran
+Attendees Count: 25
+Projected Expense: 5000.0

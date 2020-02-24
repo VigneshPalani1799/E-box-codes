@@ -1,0 +1,65 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.text.ParseException;
+import java.text.SimpleDateFormat; 
+import java.util.*;
+import java.io.*;
+
+public class Main {
+
+	public static void main(String[] args) throws IOException, ParseException {
+		// fill the code here
+        BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
+        SimpleDateFormat dateFormat = new SimpleDateFormat("dd/mm/yyyy");
+        String name,dateString,ownerName;
+        Long contactNumber;
+        Double costPerDay;
+        Integer i;
+        Date bookingDate;
+        Hall[] hall=new Hall[10];
+        for(i=0;i<2;i++){
+        System.out.println("Enter the details of Hall "+(i+1));
+        System.out.println("Name :");
+        name=in.readLine();
+        System.out.println("Contact Number :");
+        contactNumber=Long.parseLong(in.readLine());
+        System.out.println("Cost Per Day :");
+        costPerDay=Double.parseDouble(in.readLine());
+        System.out.println("Owner Name :");
+        ownerName=in.readLine();
+        System.out.println("Booking Date(dd/mm/yyyy) :");
+        dateString=in.readLine();
+        bookingDate=dateFormat.parse(dateString);
+        hall[i]=new Hall(name,contactNumber,costPerDay,ownerName,bookingDate);
+        }
+        
+        if(hall[0].getOwnerName().equals(hall[1].getOwnerName())==true)
+        {
+            if(hall[0].getContact().equals(hall[1].getContact())==true)
+            {
+                      if(hall[0].getDate().equals(hall[1].getDate())==true)
+                {
+                    if(hall[0].getCost().equals(hall[1].getCost())==true)
+                    {
+                        System.out.println("Halls are same");
+                    }
+                    else
+                    {
+                        System.out.println("Halls are different");
+                    }
+                }
+                else
+                {
+                    System.out.println("Halls are different");
+                }
+            }
+            else
+            {
+                System.out.println("Halls are different");
+            }
+        }
+        else
+            System.out.println("Halls are different");
+	}
+}

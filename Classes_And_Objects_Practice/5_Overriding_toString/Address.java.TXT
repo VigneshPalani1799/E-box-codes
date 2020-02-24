@@ -1,0 +1,41 @@
+public class Address {
+	//Your code here
+    private String line1,line2,cityName,stateName;
+    private int pinCode;
+    public Address(String line1,String line2,String cityName,String stateName,int pinCode)
+    {
+        this.line1=line1;
+        this.line2=line2;
+        this.cityName=cityName;
+        this.stateName=stateName;
+        this.pinCode=pinCode;
+    }
+    String display(){
+        return "The Address Details are";
+    }
+	@Override
+	public String toString() {
+		//Your code here
+        return this.line1+"\n"+this.line2+"\n"+this.cityName+"\n"+this.stateName+"\n"+this.pinCode;
+	}
+}public class Address {
+	//Your code here
+    private String line1,line2,cityName,stateName;
+    private int pinCode;
+    public Address(String line1,String line2,String cityName,String stateName,int pinCode)
+    {
+        this.line1=line1;
+        this.line2=line2;
+        this.cityName=cityName;
+        this.stateName=stateName;
+        this.pinCode=pinCode;
+    }
+    String display(){
+        return "The Address Details are";
+    }
+	@Override
+	public String toString() {
+		//Your code here
+        return this.line1+"\n"+this.line2+"\n"+this.cityName+"\n"+this.stateName+"\n"+this.pinCode;
+	}
+}

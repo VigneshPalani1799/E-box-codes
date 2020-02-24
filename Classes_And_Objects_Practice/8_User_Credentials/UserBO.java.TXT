@@ -1,0 +1,40 @@
+public class UserBO {
+    public User[] getUsers() {
+    	User[] users = new User[5];
+
+	users[0] = new User(1, "Louis", "rxfsuzA2345");
+	users[1] = new User(2, "Messie", "hpphmf1:");
+	users[2] = new User(3, "Steve", "opefKt");
+	users[3] = new User(4, "Kallis", "23456778");
+	users[4] = new User(5, "Wipro", "A$%");
+
+	return users;
+	}
+
+	private String encryptPassword(String value) {
+        int n=value.length();
+        int i=0;
+        String v="";
+	while(i!=n)
+        {
+            v=v+((char)(value.charAt(i)+1));
+            i++;
+        }
+        return v;
+	}
+
+	public boolean validate(String username, String password) {
+        String pass;
+        User[] user1=new User[5];
+        user1=getUsers();
+        pass=encryptPassword(password);
+        for(int i=0;i<5;i++)
+        {
+            if(user1[i].username.equals(username)==true)
+            {
+               return pass.equals(user1[i].password);
+            }
+        }
+        return false;	
+	}
+}

@@ -1,0 +1,55 @@
+In a typical application, the password will not be stored directly in the database as it will be more prone to attack. The password of users 
+will always be stored in encrypted form. To make your application secure, the password has to be in encrypted format. Hence implement a typical 
+user authorization technique for login.
+
+Create User class with following private attributes
+
+Attributes	Datatype
+id		Integer
+username	String
+password	String
+ 
+
+Include appropriate getters and setters
+Create Default and Parameterized Constructor as User(Integer id, String username, String password) for the class.
+
+Create UserBO class to validate the username and password with following methods
+
+ 
+
+Method Name						Description
+User[] getUsers()					This method returns an predefined array of users.
+
+private String encryptPassword(String password)		accepts a single argument of type String and returns the encrypted password by replacing 
+							with their next ASCII character. For example, A is replaced with B.
+
+boolean validate(String username, String password)	This method takes username and password entered by the user as parameters and returns 
+							boolean after validating.
+
+Create a driver class named Main to test the above class.
+
+Sample user list:     
+
+ID	Username	Password
+1	Louis	rxfsuzA2345
+2	Messie	hpphmf1:
+3	Steve	opefKt
+4	Kallis	23456778
+5	Wipro	A$%
+
+[Note: Strictly adhere to the Object-Oriented Specifications given in the problem statement.All class names, attribute names and method names 
+should be the same as specified in the problem statement.]
+
+Sample Input/Output - 1:
+Username :
+Louis
+Password :
+qwerty@1234
+Login Successfull
+    
+Sample Input/Output - 2:
+Username :    
+Messie
+Password :
+google
+Incorrect username/password

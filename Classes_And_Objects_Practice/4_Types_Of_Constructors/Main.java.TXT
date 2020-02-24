@@ -1,0 +1,16 @@
+import java.util.*;
+public class Main {
+    public static void main(String args[]) throws Exception{
+        String stallName,stallCategory;
+        Scanner in = new Scanner(System.in);
+        //Parameter inputs
+        System.out.println("Enter the name of the stall category:");
+        stallName=in.nextLine();
+        System.out.println("Enter the details of the stall category:");
+        stallCategory=in.nextLine();
+        StallCategory obj = new StallCategory();
+        StallCategory obj1 = new StallCategory(stallName,stallCategory);
+        obj1.displayStallDetails();
+        obj1.displayStallDetailsP();
+	}
+}

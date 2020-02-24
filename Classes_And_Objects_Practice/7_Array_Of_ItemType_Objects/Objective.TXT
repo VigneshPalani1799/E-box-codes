@@ -1,0 +1,87 @@
+Kudos, your application is progressing really good but its time to add some really cool features to it. Until now you have created single objects
+for each class, now there's a need to create an array of objects for a class to enable the search feature. Create an array of ItemType objects.
+Also,add a provision for adding a new ItemType object to the array of ItemType objects. Create an interactive console to get input from the 
+user for performing different actions on the array.
+
+Create ItemType class as before consisting of the following private attributes.
+
+Attributes	Datatype
+name		String
+deposit		Double
+costPerDay	Double
+ 
+
+Include appropriate getters and setters for the class.
+Include default and parameterized constructors for the class.
+
+Create a class named ItemTypeBO class.
+ItemTypeBO class contains the following methods.
+
+Method Name									Description
+public void add(ItemType object ,ItemType[] itemTypeArray,Integer index)	This method accepts an array of ItemType objects, an ItemType 
+										object and the index at which the object is to be added in the 
+										array. The method appends the object to the array of ItemType 
+										objects at the specified index and prints "New item added 
+										successfully"
+public void search(String search, ItemType[] itemTypeArray)			This method accepts search term and the array of ItemType 
+										objects as input and displays the details of the ItemType if 
+										matched.else prints "Searched Item Type not found"
+public void display(ItemType[] itemTypeArray)					This method accepts an array of ItemType objects as input and 
+										displays the details one by one.
+
+Create a driver class called Main. In the Main method, obtain input from the console and call the ItemTypeBO functions appropriately.
+
+Note: Display only one digit after a decimal point.
+Size of itemType Array should be 10.
+The search statement "Enter the Name of the item to be searched" should be in the Main method.
+Strictly adhere to the Object-Oriented Specifications given in the problem statement.
+All class names, attribute names and method names should be the same as specified in the problem statement.
+
+[All text in bold corresponds to the input and rest corresponds to output]
+Sample Input/Output:
+
+Enter the Number of Item Type
+3
+Enter the Item Type 1 Name
+Electronics
+Enter the Deposit Amount
+2500
+Enter the Cost per day
+150
+New item added successfully
+Enter the Item Type 2 Name
+Chemicals
+Enter the Deposit Amount
+500
+Enter the Cost per day
+50
+New item added successfully
+Enter the Item Type 3 Name
+Construction
+Enter the Deposit Amount
+2000
+Enter the Cost per day
+500
+New item added successfully
+Item Type Number 1:
+Name:Electronics
+Deposit Amount:2500.0
+Cost Per Day:150.0
+Item Type Number 2:
+Name:Chemicals
+Deposit Amount:500.0
+Cost Per Day:50.0
+Item Type Number 3:
+Name:Construction
+Deposit Amount:2000.0
+Cost Per Day:500.0
+Enter the Name of the item to be searched
+Construction
+Searched Item Type is:
+Name:Construction
+Deposit Amount:2000.0
+Cost Per Day:500.0
+
+ 
+
+

@@ -1,0 +1,52 @@
+Your City council has decided to organize a Fair at your city. The city Mayor has announced a coding contest for creating the application for 
+the Fair. The Best application would be used for the fair and the developer gets a cash prize. You are a well versed and aspiring Programmer in 
+your city. Many programmers have enrolled themselves for the contest and you are one of them. Every contestant is provided with a Schema diagram
+of the Fair. Get yourself acquainted with Schema and brace yourself for the challenge!!!.
+
+A part of the Application requires a user prompt to create a new Item Type. Hence create an ItemType class with the following private attributes.
+ 
+Attributes	Datatype
+name		String
+deposit		Double
+costPerDay	Double
+ 
+Include appropriate Getters and Setters for the class.
+The naming convention for Getters and Setters should be in Camel case.
+For example, for the attribute name the getters and setters should be getName() and setName().
+ 
+
+Example :
+public void setName(String name){
+ this.name = name;
+}
+
+public String getName(){
+ return this.name;
+}
+
+ItemType class contains the following methods.
+
+ 
+Method Name	Description
+void display()	This method displays the details of the ItemType as per specification provided in the sample input/output 
+
+Create a driver class called Main. In the Main method, obtain input from the user in the console and create a new ItemType object and assign the 
+values to the object's members using setters. Display the details by calling the display method.
+
+Display only one digit after the decimal point for Double datatype.
+
+[Note: Strictly adhere to theObject Oriented Specifications given in the problem statement.
+All class names, attribute names and method names should be the same as specified in the problem statement.]
+
+[All text in bold corresponds to the input and rest corresponds to output]
+Sample Input/Output:
+
+Enter the Item Type Name
+Electronics
+Enter the Deposit Amount
+2500
+Enter the Cost per day of the Item Type
+125
+Item Name:Electronics
+Deposit Amount:2500.0
+Cost Per Day:125.0

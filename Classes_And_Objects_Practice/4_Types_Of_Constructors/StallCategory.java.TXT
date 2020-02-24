@@ -1,0 +1,30 @@
+import java.util.*;
+public class StallCategory {
+    //Write your code here
+    Scanner in = new Scanner(System.in);
+    private String stallNameP,stallCategoryP;
+    public StallCategory(){
+        System.out.println("Using Default Constructor");
+    }
+    
+    public StallCategory(String stallName,String category){
+        this.stallNameP=stallName;
+        this.stallCategoryP=category;
+    }
+    
+    void displayStallDetails()
+    {
+        System.out.println("Details of the stall category:");
+        System.out.println("Name:"+this.stallNameP);
+        System.out.println("Detail:"+this.stallCategoryP);
+    }
+    
+    void displayStallDetailsP()
+    {
+        System.out.println("Using Parameterised Constructor");
+        System.out.println("Details of the stall category:");
+        System.out.println("Name:"+this.stallNameP);
+        System.out.println("Detail:"+this.stallCategoryP);
+    }
+    
+}

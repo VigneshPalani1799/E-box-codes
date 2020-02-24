@@ -1,0 +1,61 @@
+Now for doing any computation works with the class its not advised to use POJO class. So we can use a BO class for computational purposes.
+
+The Stall owners wanted to calculate the total cost of a particular ItemType for the given timeline. So add a feature in the application to 
+calculate the total cost for the given timeline.
+
+Create a class ItemType with the following attributes,
+
+Attribute	Data Type
+name		String
+deposit		Double
+costPerDay	Double
+
+Add appropriate getter/setter, default and parameterized constructor.
+public ItemType(String name, Double deposit, Double costPerDay).
+
+Get the start date and end date (manipulate as Date object) from the stall owners to calculate rent for the particular ItemType. Write a method 
+calculateCost in ItemTypeBO class. 
+
+Method									Method Description
+public Double calculateCost(Date start,Date end,ItemType typeIns)	returns a Double which corresponds to the total cost.
+ 
+
+Create a driver class Main to test the above classes.
+
+Note: Strictly adhere to the Object-Oriented Specifications given in the problem statement.
+All class names, attribute names and method names should be the same as specified in the problem statement.
+
+Display only 1 digit after decimal while displaying cost.
+Input date format is dd-MM-yyyy
+
+Refer sample input and output.
+[All texts in bold corresponds to input and rest corresponds to output]
+Sample Input/Output 1:
+
+Enter the details of the item type
+Name:
+Bench
+Deposit:
+1000.00
+Cost per Day:
+50.00
+Enter the starting date:
+12-12-2017
+Enter the ending date:
+14-12-2017
+The total cost is Rs.100.0
+
+Sample Input/Output 2:
+
+Enter the details of the item type
+Name:
+Rolling Fan
+Deposit:
+500.00
+Cost per Day:
+50.00
+Enter the starting date:
+29-12-2017
+Enter the ending date:
+02-01-2018
+The total cost is Rs.200.0

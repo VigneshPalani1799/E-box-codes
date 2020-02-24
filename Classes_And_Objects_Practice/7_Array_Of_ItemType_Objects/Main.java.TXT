@@ -1,0 +1,30 @@
+import java.util.*;
+import java.io.*;
+import java.lang.*;
+import java.text.*;
+
+public class Main {
+    public static void main(String args[])throws Exception{
+        //write our code here
+        ItemTypeBO ibo=new ItemTypeBO();
+        ItemType[] ia=new ItemType[10];
+        BufferedReader br=new BufferedReader(new InputStreamReader(System.in)); 
+        System.out.println("Enter the Number of Item Type");
+        Integer num=Integer.parseInt(br.readLine());
+        for(int i=0;i<num;i++)
+        {
+            System.out.println("Enter the Item Type "+ (i+1)+" Name");
+            String n=br.readLine();
+            System.out.println("Enter the Deposit Amount");
+            Double d=Double.parseDouble(br.readLine());
+            System.out.println("Enter the Cost per day");
+            Double c=Double.parseDouble(br.readLine());
+            ItemType it=new ItemType(n,d,c);
+            ibo.add(it,ia,i);
+        }
+        ibo.display(ia);
+        System.out.println("Enter the Name of the item to be searched");
+        String s=br.readLine();
+        ibo.search(s,ia);
+    }
+}

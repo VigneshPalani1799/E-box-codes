@@ -1,0 +1,25 @@
+import java.util.*;
+import java.io.*;
+
+public class Main {
+    public static void main(String[] args) throws IOException{
+        //Your code here
+         BufferedReader br=new BufferedReader(new InputStreamReader(System.in)); 
+        System.out.println("Enter the number of events:");
+        Integer n=Integer.parseInt(br.readLine());
+        Event earry[]=new Event[n];
+        EventBO ebo=new EventBO();
+        for(int i=0;i<n;i++){
+            System.out.println("Enter the details of the event "+ (i+1) +" in comma separated format:");
+            String D[]=br.readLine().split(",");
+            Event e=new Event(D[0],D[1],D[2],D[3],Integer.parseInt(D[4]),Double.parseDouble(D[5]));
+            ebo.addEvent(earry,e);
+        }
+        System.out.println("The Events entered are:");
+        ebo.displayAll(earry);
+        System.out.println("Enter the type of event to be searched:");
+        String t=br.readLine();
+        earry=ebo.searchEvent(earry,t);
+        ebo.displayAll(earry);
+	}
+}

@@ -1,0 +1,71 @@
+Now we know how to use the equals() method. Now let's use it in our application to reduce redundancy. Same halls cannot be booked on the same 
+date for two different events. So get the halls booked by two different persons and check whether it is same or not. Use equals method to check 
+all attributes of the hall are equal including booking date.
+
+Create Hall class with following private attributes
+ 
+Attributes	Datatype
+name	String
+contactNumber	Long
+costPerDay	Double
+ownerName	String
+bookingDate	Date
+Include appropriate getters and setters
+Create Default and Parameterized Constructor as Hall(String name, Long contactNumber, Double costPerDay, String ownerName, Date bookingDate) for 
+the class.
+Override equals method that compares all the fields of the class.
+
+Create a driver class named Main to test the above class.
+
+[Note: Strictly adhere to the Object-Oriented Specifications given in the problem statement.All class names, attribute names and method names 
+should be the same as specified in the problem statement.]
+
+Sample Input/Output - 1:
+Enter the details of Hall 1
+Name :
+Platinum
+Contact Number :
+2200889
+Cost Per Day :
+32000
+Owner Name :
+Bala
+Booking Date(dd/mm/yyyy) :
+12/12/2017
+Enter the details of Hall 2
+Name :
+Platinum
+Contact Number :
+2090909
+Cost Per Day :
+48000
+Owner Name :
+Krishna
+Booking Date(dd/mm/yyyy) :
+12/12/2017
+Halls are different
+
+Sample Input/Output - 2:     
+Enter the details of Hall 1
+Name :
+Euro
+Contact Number :
+224400
+Cost Per Day :
+1200
+Owner Name :
+Krish
+Booking Date(dd/mm/yyyy) :
+20/01/2018
+Enter the details of Hall 2
+Name :
+Euro
+Contact Number :
+224400
+Cost Per Day :
+1200
+Owner Name :
+Krish
+Booking Date(dd/mm/yyyy) :
+20/01/2018
+Halls are same
